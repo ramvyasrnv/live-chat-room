@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Specify the document type and language -->
+    <meta charset="UTF-8">
+    <!-- Define the character encoding for the document -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Make the page responsive to different screen sizes -->
+
+    <title>Live Chat Room</title>
+    <!-- Title of the webpage -->
+
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}"/>
+    <!-- Link to the external CSS stylesheet, dynamically generated using Flask's url_for function -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Import the Roboto font from Google Fonts -->
+
+    <script 
+        src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.8.1/socket.io.js" 
+        integrity="sha512-8BHxHDLsOHx+flIrQ0DrZcea7MkHqRU5GbTHmbdzMRnAaoCIkZ97PqZcXJkKZckMMhqfoeaJE+DNUVuyoQsO3Q==" 
+        crossorigin="anonymous" 
+        referrerpolicy="no-referrer">
+    </script>
+    <!-- Include the Socket.IO client library for real-time communication -->
+</head>
+<body>
+    <div class="content">
+        <!-- Main content container -->
+        {% block content %}{% endblock %}
+        <!-- Define a block for dynamic content insertion, overridden by child templates -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,219 @@
+/* Base Reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    line-height: 1.6;
+}
+
+/* Center and Style the Form */
+form {
+    width: 100%;
+    max-width: 400px; /* Fixed max-width for consistency */
+    margin: 50px auto; /* Center the form vertically and horizontally */
+    padding: 20px;
+    background: #1c1c1c; /* Slightly lighter black background */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); /* Soft white shadow */
+}
+
+/* Form Elements Spacing */
+form div {
+    margin-bottom: 20px;
+}
+
+/* Labels */
+form label {
+    display: block;
+    font-size: 14px;
+    color: #bbb; /* Light gray text for labels */
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+/* Input Fields */
+form input {
+    width: 100%; /* Full width inside the form */
+    padding: 12px 14px;
+    font-size: 14px;
+    border: 1px solid #333; /* Dark gray border */
+    border-radius: 6px;
+    outline: none;
+    background-color: #222; /* Dark gray input background */
+    color: #fff; /* White text in input */
+    box-sizing: border-box; /* Include padding in width calculation */
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Focus Effect on Inputs */
+form input:focus {
+    border-color: #fff; /* White border on focus */
+    background-color: #333; /* Slightly lighter gray */
+}
+
+/* Buttons */
+form button {
+    width: 100%; /* Full width of the button */
+    padding: 12px 14px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000; /* Black text */
+    background-color: #fff; /* White button */
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover Effect on Buttons */
+form button:hover {
+    background-color: #ccc; /* Light gray hover effect */
+    color: #000; /* Keep text black */
+}
+
+/* Join Button Styling */
+form .join {
+    display: flex;
+    flex-direction: column; /* Stack label, input, and button vertically */
+}
+
+form .join button {
+    margin-top: 10px; /* Add space above the join button */
+}
+
+/* Create Button Styling */
+form .create- {
+    margin-top: 20px; /* Space between form elements and create button */
+}
+
+/* Error Message Styling */
+form ul {
+    margin-top: 20px;
+    padding: 10px;
+    list-style: none; /* Remove bullet points */
+    background-color: #ff3333; /* Red background for errors */
+    color: #fff; /* White text for contrast */
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+/* Individual Error Items */
+form ul li {
+    margin-bottom: 5px; /* Space between multiple error messages */
+}
+
+/* Smooth Transitions for Background */
+body, form {
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+/* Base Reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    line-height: 1.6;
+}
+
+/* Center and Style the Chat Box */
+.box {
+    width: 100%;
+    max-width: 600px; /* Fixed max-width for consistency */
+    margin: 50px auto; /* Center the chat box vertically and horizontally */
+    padding: 20px;
+    background: #1c1c1c; /* Slightly lighter black background */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); /* Soft white shadow */
+}
+
+/* Chat Box Title */
+h2 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #bbb; /* Light gray text for title */
+}
+
+/* Messages Container */
+.messages {
+    height: 300px; /* Fixed height for chat messages area */
+    overflow-y: auto; /* Allow scrolling */
+    background-color: #222; /* Dark gray background */
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #fff; /* White text */
+}
+
+/* Input Section */
+.input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Message Input */
+textarea {
+    width: 80%; /* Message input takes most of the width */
+    padding: 12px 14px;
+    font-size: 14px;
+    border: 1px solid #333; /* Dark gray border */
+    border-radius: 6px;
+    outline: none;
+    background-color: #222; /* Dark gray input background */
+    color: #fff; /* White text in input */
+    box-sizing: border-box; /* Include padding in width calculation */
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    resize: none; /* Disable resizing */
+}
+
+/* Focus Effect on Input */
+textarea:focus {
+    border-color: #fff; /* White border on focus */
+    background-color: #333; /* Slightly lighter gray */
+}
+
+/* Send Button */
+button {
+    width: 18%; /* Button takes up remaining space */
+    padding: 12px 14px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000; /* Black text */
+    background-color: #fff; /* White button */
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover Effect on Buttons */
+button:hover {
+    background-color: #ccc; /* Light gray hover effect */
+    color: #000; /* Keep text black */
+}
+
+/* Smooth Transitions for Background */
+body, .box {
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Error Message Styling (Optional) */
+form ul {
+    margin-top: 20px;
+    padding: 10px;
+    list-style: none; /* Remove bullet points */
+    background-color: #ff3333; /* Red background for errors */
+    color: #fff; /* White text for contrast */
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+/* Individual Error Items */
+form ul li {
+    margin-bottom: 5px; /* Space between multiple error messages */
+}

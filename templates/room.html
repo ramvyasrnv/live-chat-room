@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+<!-- Extend the base template to maintain consistent layout and styling -->
+
+{% block content %}
+<!-- Define the content block to replace the content section in base.html -->
+
+<div class="box">
+    <!-- Container for the chat interface -->
+    <h2>Chat room:{{code}}</h2>
+    <!-- Heading for the chat room -->
+
+    <div class="messages" id="messages">
+        <!-- Div to display chat messages dynamically -->
+    </div>
+
+    <div class="input">
+        <!-- Input section for sending a new message -->
+        <textarea
+            rows="1" 
+            placeholder="Write yout Message here" 
+            name="messages" 
+            id="message"></textarea>
+
+        <button 
+            type="button" 
+            name="send" 
+            id="send-btn" 
+            onclick="sendMessage()"
+            <!-- Button to send the message, triggers the sendMessage function -->
+        
+            Send
+        </button>
+    </div>
+</div>
+
+<script type="text/javascript">  // Initialize Socket.IO for real-time communication
+    var socketio = io();
+    const messages = document.getElementById("messages")
+    const createMessage = (name , msg ) => {
+        const content = `
+        <div class="text">
+            <span>
+                <strong>${name}</strong>: ${msg}
+            </span>
+            <span class="muted">
+                ${new Date().toLocaleString()} 
+            </span>
+      </div>
+        `;
+        messages.innerHTML += content;
+    };
+
+    socketio.on("message",(data) => {
+        createMessage (data.name , data.message);
+        
+    });
+
+    const sendMessage = () => {
+        const message = document.getElementById("message")
+        if(message.value === "") return;
+        socketio.emit("message", {data: message.value});
+        message.value = "";
+    };
+</script>
+
+{% endblock %}
+<!-- End of the content block -->
